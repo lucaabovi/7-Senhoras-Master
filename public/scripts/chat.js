@@ -69,12 +69,12 @@ function userMessage(message) {
         }
         else {
             console.error('Server error for Conversation. Return status of: ', xhr.statusText);
-            displayMessage("Putz, deu um tilt aqui. Você pode tentar novamente.", watson);
+            displayMessage("Putz, deu um tilt aqui. VocÃƒÂª pode tentar novamente.", watson);
         }
     };
     xhr.onerror = function () {
         console.error('Network error trying to send message!');
-        displayMessage("Ops, acho que meu cérebro está offline. Espera um minutinho para continuarmos por favor.", watson);
+        displayMessage("Ops, acho que meu cÃƒÂ©rebro estÃƒÂ¡ offline. Espera um minutinho para continuarmos por favor.", watson);
     };
     console.log(JSON.stringify(params));
     xhr.send(JSON.stringify(params));

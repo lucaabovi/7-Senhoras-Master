@@ -1,4 +1,6 @@
 @import url(https://fonts.gogleapis.com/css?family=Source+Sans+Pro:400,600);
+
+
 html,
 body {
     width: 100%;
@@ -6,10 +8,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
+
 }
 
 body {
-    background-image: url(../images/ibm.jpg);
+   /* background-image: url(../images/ibm.jpg);*/
+    background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -21,14 +25,21 @@ body {
 
 .header {
     height: 10%;
-    color: #fff;
+    color: #FEFEFE;
     text-align: center;
 }
 
 .main {
     height: 80%;
     text-align: center;
-    color: #fff;
+    color: #FEFEFE;
+}
+
+.logotipo {
+    width: 38%;
+    position: relative;
+    left: -25%;
+    top: 110px;
 }
 
 .footer {
@@ -39,15 +50,14 @@ body {
 
 .chat-popup {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 1px;
+    bottom: 0px;
     background-color: rgba(255, 255, 255, 0.22);
     width: 310px;
     height: 40px;
     border-top-left-radius: 4px;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    overflow: hidden;
     animation-name: popup_open;
     border-width: 1px 1px 0px 1px;
     border-style: solid;
@@ -73,7 +83,7 @@ body {
 }
 
 .chat-popup .chat-header {
-    background-color: #e6e6e6;
+    background-color: #99CA48;
     height: 40px;
     border-top-left-radius: 4px;
     display: flex;
@@ -170,14 +180,14 @@ body {
 
 .chat-popup .chat-body .bubble.watson {
     color: #fff;
-    background-color: #00b0ff;
+    background-color: #99CA48;
     align-self: flex-start;
     margin-left: 20px;
 }
 
 .chat-popup .chat-body .bubble.watson:before {
     left: -18px;
-    background-color: #00b0ff;
+    background-color: #99CA48;
 }
 
 .chat-popup .chat-body .bubble.user:before {
@@ -200,8 +210,8 @@ body {
     animation-fill-mode: forwards;
     width: 100%;
     animation-name: show_chat;
-    border: 1px solid #e6e6e6;
-    background-color: #eceff1;
+    border: 1px solid #99CA48;
+    background-color: #99CA48;
     font-family: 'Source Sans Pro',sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -226,4 +236,111 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     height: 32px;
+}
+
+
+
+
+/*celulares e tablets na horizontal*/
+
+@media screen and (max-width: 1024px) and (min-width: 1024px){
+    .chat-popup {
+        bottom: 0px !important;
+        width: 380px !important;
+    }
+    .logotipo {
+        width: 38% !important;
+    }
+}
+
+@media screen and (max-width: 823px) and (min-width: 823px){
+    .chat-popup {
+        bottom: 23px !important;
+    }
+    .logotipo {
+         width: 38% !important;
+    }
+}
+
+@media screen and (max-width: 812px) and (min-width: 812px){
+    .chat-popup {
+        bottom: 29px !important;
+    }
+   .logotipo {
+        width: 32% !important;
+        top: 80px !important;
+        left: -150px !important;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 768px){
+    .chat-popup {
+        bottom: 0px !important;
+        width: 380px !important;
+    }
+    .logotipo {
+        width: 38% !important;
+    }
+}
+
+@media screen and (max-width: 736px) and (min-width: 736px){
+    .chat-popup {
+         bottom: 23px !important;
+    }
+    .logotipo {
+        width: 38% !important;
+    }
+}
+
+@media screen and (max-width: 731px) and (min-width: 731px){
+   .chat-popup {
+        bottom: 23px !important;
+    }
+   .logotipo {
+         width: 38% !important;
+    }
+}
+
+@media screen and (max-width: 667px) and (min-width: 667px){
+   .chat-popup {
+        bottom: 28px !important;
+   }
+   .logotipo {
+         width: 38% !important;
+   }
+}
+
+@media screen and (max-width: 640px) and (min-width: 640px){
+      .chat-popup {
+             bottom:30px !important;
+      }
+       .logotipo {
+            top: 74px !important;
+       }
+}
+
+@media screen and (max-width: 568px) and (min-width: 568px){
+   .chat-popup {
+        bottom: 37px !important;
+   }
+   .logotipo {
+         width: 32% !important;
+         left: -27% !important;
+         top: 86px !important;
+    }
+}
+
+
+/*celulares na vertical*/
+
+@media screen and (min-width: 320px) and (max-width: 560px){
+    .chat-popup {
+        width: 100% !important;
+        right: 0 !important;
+    }
+    .logotipo {
+         left: -1% !important;
+         top: -40px !important;
+         width: 38% !important;
+        }
 }
